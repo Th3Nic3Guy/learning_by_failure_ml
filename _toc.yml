@@ -3,6 +3,7 @@
 
 format: jb-book
 root: intro
+chapters:
   - file: introduction
   - file: defining_the_problem_statement
   - file: know_your_data
