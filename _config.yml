@@ -1,0 +1,44 @@
+title: Learning By Failure - Machine Learning
+author: Th3Nic3Guy
+copyright: "2024"
+logo: logo.svg
+exclude_patterns:
+  [
+    _build,
+    "*.db",
+    .DS_Store,
+    "**.ipynb_checkpoints",
+    ".venv",
+    ".git/**",
+    ".json",
+  ]
+
+only_build_toc_files: true
+
+execute:
+  execute_notebooks: "off"
+
+latex:
+  latex_documents:
+    targetname: book.tex
+
+bibtex_bibfiles:
+  - references.bib
+launch_buttons:
+  notebook_interface: "jupyterlab"
+
+repository:
+  url: https://github.com/Th3Nic3Guy/learning_by_failure_ml
+  branch: master
+
+html:
+  favicon: logo.svg
+  use_issues_button: true
+  use_repository_button: false
+  extra_footer: "Uth! Kaam abhi baaki hai"
+  google_analytics_id: "G-E8J9G0YK61"
+sphinx:
+  extentions:
+    - bokeh.sphinxext
+  config:
+    mathjax_path: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js

@@ -2,7 +2,9 @@ autopep8
 backtesting
 ipywidgets
 jupyter-book
+jupyter-book
 markdown
+matplotlib
 mplfinance
 networkx
 numpy<2

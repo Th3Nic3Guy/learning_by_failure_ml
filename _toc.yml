@@ -1,0 +1,13 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+  - file: introduction
+  - file: defining_the_problem_statement
+  - file: know_your_data
+  - file: supervised_learning
+  - file: unsupervised_learning
+  - file: deep_learning
+  - file: reinforcement_learning
+  - file: about
