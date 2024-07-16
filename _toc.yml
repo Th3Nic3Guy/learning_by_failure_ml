@@ -4,11 +4,11 @@
 format: jb-book
 root: intro
 chapters:
-  - file: introduction
-  - file: defining_the_problem_statement
-  - file: know_your_data
-  - file: supervised_learning
-  - file: unsupervised_learning
-  - file: deep_learning
-  - file: reinforcement_learning
+  - file: 01_introduction
+  - file: 02_defining_the_problem_statement
+  - file: 03_know_your_data
+  - file: 04_supervised_learning
+  - file: 05_unsupervised_learning
+  - file: 06_deep_learning
+  - file: 07_reinforcement_learning
   - file: about
