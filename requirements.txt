@@ -18,3 +18,4 @@ ta-lib
 tabulate
 tensorflow
 tqdm
+kaggle
