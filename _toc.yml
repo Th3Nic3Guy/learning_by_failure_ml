@@ -7,8 +7,9 @@ chapters:
   - file: 01_introduction
   - file: 02_defining_the_problem_statement
   - file: 03_know_your_data
-  - file: 04_supervised_learning
-  - file: 05_unsupervised_learning
-  - file: 06_deep_learning
-  - file: 07_reinforcement_learning
+  - file: 04_supervised_learning_regression
+  - file: 05_supervised_learning_classification
+  - file: 06_unsupervised_learning
+  - file: 07_deep_learning
+  - file: 08_reinforcement_learning
   - file: about
