@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Learning By Failure | Machine Learning &#8212; Learning By Failure - Machine Learning</title>
+    <title>Supervised Learning &#8212; Learning By Failure - Machine Learning</title>
   
   
   
@@ -70,12 +70,13 @@
                 gtag('config', 'G-E8J9G0YK61');
             </script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'intro';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '04_supervised_learning_regression';</script>
     <link rel="icon" href="_static/logo.svg"/>
     <link rel="author" title="About these documents" href="about.html" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Introduction to Machine Learning" href="01_introduction.html" />
+    <link rel="next" title="Supervised Learning" href="05_supervised_learning_classification.html" />
+    <link rel="prev" title="Know Your Data" href="03_know_your_data.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -137,8 +138,6 @@
       
       
       
-        
-      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -155,7 +154,7 @@
 
   
 
-<a class="navbar-brand logo" href="#">
+<a class="navbar-brand logo" href="intro.html">
   
   
   
@@ -186,17 +185,17 @@
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1 current active">
-                <a class="reference internal" href="#">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
                     Learning By Failure | Machine Learning
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="01_introduction.html">Introduction to Machine Learning</a></li>
 <li class="toctree-l1"><a class="reference internal" href="02_defining_the_problem_statement.html">Defining the problem statement</a></li>
 <li class="toctree-l1"><a class="reference internal" href="03_know_your_data.html">Know Your Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="04_supervised_learning_regression.html">Supervised Learning</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Supervised Learning</a></li>
 <li class="toctree-l1"><a class="reference internal" href="05_supervised_learning_classification.html">Supervised Learning</a></li>
 <li class="toctree-l1"><a class="reference internal" href="06_unsupervised_learning.html">Unsupervised Learning</a></li>
 <li class="toctree-l1"><a class="reference internal" href="07_deep_learning.html">Deep Learning</a></li>
@@ -245,7 +244,7 @@
 <div class="article-header-buttons">
 
 
-<a href="https://github.com/Th3Nic3Guy/learning_by_failure_ml/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here." target="_blank"
+<a href="https://github.com/Th3Nic3Guy/learning_by_failure_ml/issues/new?title=Issue%20on%20page%20%2F04_supervised_learning_regression.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button"
    title="Open an issue"
    data-bs-placement="bottom" data-bs-toggle="tooltip"
@@ -271,7 +270,7 @@
       
       
       
-      <li><a href="_sources/intro.md" target="_blank"
+      <li><a href="_sources/04_supervised_learning_regression.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -281,7 +280,7 @@
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -342,7 +341,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -353,11 +354,23 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Learning By Failure | Machine Learning</h1>
+    <h1>Supervised Learning</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#defining-regression-problems">Defining Regression Problems</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simple-regression-model">Simple Regression Model</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inference">Inference</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluation-metrics">Evaluation Metrics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-backtests">Running Backtests</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -367,28 +380,35 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="learning-by-failure-machine-learning">
-<h1>Learning By Failure | Machine Learning<a class="headerlink" href="#learning-by-failure-machine-learning" title="Link to this heading">#</a></h1>
-<p>A repository of sample notebooks to learn concepts of Applied Machine Learning in a Project Oriented Approach.</p>
-<p>The repository is a part of the <code class="docutils literal notranslate"><span class="pre">Learning</span> <span class="pre">By</span> <span class="pre">Failure</span></code> series, where we learn concepts by failing and understanding the reasons behind the failure.</p>
-<p>We use a central theme project to first build a need to learn the concepts of Machine Learning and then apply them to solve the problem.</p>
-<blockquote>
-<div><p>Please note: Stock Market is a complex domain and the project is only for educational purposes. The project is not intended to be used for real-world trading. The “Learning By Failure” concept is intended to target something so aspirational that we wish learn more to try and achieve our goals.</p>
-</div></blockquote>
-<p>Below is the outline of the course:</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="01_introduction.html">Introduction to Machine Learning</a></li>
-<li class="toctree-l1"><a class="reference internal" href="02_defining_the_problem_statement.html">Defining the problem statement</a></li>
-<li class="toctree-l1"><a class="reference internal" href="03_know_your_data.html">Know Your Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="04_supervised_learning_regression.html">Supervised Learning</a></li>
-<li class="toctree-l1"><a class="reference internal" href="05_supervised_learning_classification.html">Supervised Learning</a></li>
-<li class="toctree-l1"><a class="reference internal" href="06_unsupervised_learning.html">Unsupervised Learning</a></li>
-<li class="toctree-l1"><a class="reference internal" href="07_deep_learning.html">Deep Learning</a></li>
-<li class="toctree-l1"><a class="reference internal" href="08_reinforcement_learning.html">Reinforcement Learning</a></li>
-<li class="toctree-l1"><a class="reference internal" href="about.html">About Me</a></li>
-</ul>
-</div>
+  <section class="tex2jax_ignore mathjax_ignore" id="supervised-learning">
+<h1>Supervised Learning<a class="headerlink" href="#supervised-learning" title="Link to this heading">#</a></h1>
+<section id="defining-regression-problems">
+<h2>Defining Regression Problems<a class="headerlink" href="#defining-regression-problems" title="Link to this heading">#</a></h2>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-center"><p>1D regression</p></th>
+<th class="head text-center"><p>2D regression</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p><img alt="regression" src="_images/regression0.png" /></p></td>
+<td class="text-center"><p><img alt="regression" src="_images/regression1.png" /></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="simple-regression-model">
+<h2>Simple Regression Model<a class="headerlink" href="#simple-regression-model" title="Link to this heading">#</a></h2>
+</section>
+<section id="inference">
+<h2>Inference<a class="headerlink" href="#inference" title="Link to this heading">#</a></h2>
+</section>
+<section id="evaluation-metrics">
+<h2>Evaluation Metrics<a class="headerlink" href="#evaluation-metrics" title="Link to this heading">#</a></h2>
+</section>
+<section id="running-backtests">
+<h2>Running Backtests<a class="headerlink" href="#running-backtests" title="Link to this heading">#</a></h2>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -421,12 +441,21 @@ document.write(`
                 <footer class="prev-next-footer">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="03_know_your_data.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Know Your Data</p>
+      </div>
+    </a>
     <a class="right-next"
-       href="01_introduction.html"
+       href="05_supervised_learning_classification.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Introduction to Machine Learning</p>
+        <p class="prev-next-title">Supervised Learning</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -437,7 +466,24 @@ document.write(`
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"></div>
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#defining-regression-problems">Defining Regression Problems</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simple-regression-model">Simple Regression Model</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inference">Inference</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluation-metrics">Evaluation Metrics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-backtests">Running Backtests</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
