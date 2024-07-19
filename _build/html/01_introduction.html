@@ -195,8 +195,8 @@
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Introduction to Machine Learning</a></li>
 <li class="toctree-l1"><a class="reference internal" href="02_defining_the_problem_statement.html">Defining the problem statement</a></li>
 <li class="toctree-l1"><a class="reference internal" href="03_know_your_data.html">Know Your Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="04_supervised_learning_regression.html">Supervised Learning</a></li>
-<li class="toctree-l1"><a class="reference internal" href="05_supervised_learning_classification.html">Supervised Learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04_supervised_learning_regression.html">Supervised Learning | Regression</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05_supervised_learning_classification.html">Supervised Learning | Classification</a></li>
 <li class="toctree-l1"><a class="reference internal" href="06_unsupervised_learning.html">Unsupervised Learning</a></li>
 <li class="toctree-l1"><a class="reference internal" href="07_deep_learning.html">Deep Learning</a></li>
 <li class="toctree-l1"><a class="reference internal" href="08_reinforcement_learning.html">Reinforcement Learning</a></li>
@@ -398,14 +398,47 @@ being explicitly programmed to perform the task.</p>
 <h2>Introduction to the <code class="docutils literal notranslate"><span class="pre">World</span> <span class="pre">of</span> <span class="pre">AI/ML</span></code><a class="headerlink" href="#introduction-to-the-world-of-ai-ml" title="Link to this heading">#</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">Machine</span> <span class="pre">Learning</span></code> in essence is basically <code class="docutils literal notranslate"><span class="pre">Mathematics</span></code> on overdrive.</p>
 <p>What is <code class="docutils literal notranslate"><span class="pre">Machine</span> <span class="pre">Learning</span></code>? What is the basic level of ML?</p>
+<p>Imagine the following code:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">x</span><span class="o">&gt;</span><span class="mi">10</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x is greater than 10&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x is less than 10&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Is this <code class="docutils literal notranslate"><span class="pre">Machine</span> <span class="pre">Learning</span></code>?</p>
+<blockquote>
+<div><p>No, this is a rule based system. But re-imagine
+this example as follows:</p>
+</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">x</span><span class="o">&gt;</span><span class="n">y</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x is greater than 10&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x is less than 10&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>where the value of <code class="docutils literal notranslate"><span class="pre">y</span></code> is adjusted but mathematical operations and
+feedback rather than you explicitly setting the value as 10.</p>
+<p>Is this now <code class="docutils literal notranslate"><span class="pre">Machine</span> <span class="pre">Learning</span></code>?</p>
+<blockquote>
+<div><p>Yes, this is a basic example of <code class="docutils literal notranslate"><span class="pre">Machine</span> <span class="pre">Learning</span></code>.</p>
+</div></blockquote>
+<p>First try to understand What is <code class="docutils literal notranslate"><span class="pre">Artificial</span> <span class="pre">Intelligence</span></code>?</p>
+<p>Think of <code class="docutils literal notranslate"><span class="pre">Artificial</span> <span class="pre">Intelligence</span></code>, the buzzword of the decade, as the ability to learn the art of decision making.
+Whether the decision is the action to switch on the bulb based on light intensity on the sensor or the descision to
+turn the car wheel in case of any object detected in front of the car or the ability to predict the next word in
+the sequece of sentence, or just taking the descision to determine which object is present in the image.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Machine</span> <span class="pre">Learning</span></code> is the subset of this AI</p>
+<p>It is about building a mathematical set of equations which take some set of inputs and outputs a value which can be <code class="docutils literal notranslate"><span class="pre">inferred</span></code> by down stream systems as a descision.</p>
+<p>ML is the <code class="docutils literal notranslate"><span class="pre">if..else...end</span></code> condition that saves our efforts to come up with rules that execute certain actions.</p>
+<p>Consider <code class="docutils literal notranslate"><span class="pre">Artificial</span> <span class="pre">Intelligence</span></code></p>
 <p><img alt="maths" src="_images/ai.png" /></p>
-<p><img alt="map" src="_images/map_of_ml.png" /></p>
 </section>
 <section id="machine-learning-and-its-applications">
 <h2>Machine Learning and Its Applications<a class="headerlink" href="#machine-learning-and-its-applications" title="Link to this heading">#</a></h2>
 </section>
 <section id="types-of-machine-learning">
 <h2>Types of Machine Learning<a class="headerlink" href="#types-of-machine-learning" title="Link to this heading">#</a></h2>
+<p><img alt="map" src="_images/map_of_ml.png" /></p>
 <section id="matrix-of-problems-supervised-unsupervised-regression-classification">
 <h3>Matrix of problems: <code class="docutils literal notranslate"><span class="pre">Supervised</span></code>/<code class="docutils literal notranslate"><span class="pre">Unsupervised</span></code>, <code class="docutils literal notranslate"><span class="pre">Regression</span></code>/<code class="docutils literal notranslate"><span class="pre">Classification</span></code><a class="headerlink" href="#matrix-of-problems-supervised-unsupervised-regression-classification" title="Link to this heading">#</a></h3>
 <p>Examples:</p>
