@@ -369,7 +369,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#machine-learning-is-purely-mathematics-anything-and-everything-that-you-would-solve-via-machine-learning-first-needs-to-be-translated-to-mathematics-first-and-then-back-to-business-problem"><code class="docutils literal notranslate"><span class="pre">Machine</span> <span class="pre">Learning</span></code> is purely mathematics. Anything and everything that you would solve via <code class="docutils literal notranslate"><span class="pre">Machine</span> <span class="pre">Learning</span></code> first needs to be translated to mathematics first and then back to business problem.</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#machine-learning-and-its-applications">Machine Learning and Its Applications</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#machine-learning-the-process">Machine Learning: The process</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-machine-learning">Types of Machine Learning</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-of-problems-supervised-unsupervised-regression-classification">Matrix of problems: <code class="docutils literal notranslate"><span class="pre">Supervised</span></code>/<code class="docutils literal notranslate"><span class="pre">Unsupervised</span></code>, <code class="docutils literal notranslate"><span class="pre">Regression</span></code>/<code class="docutils literal notranslate"><span class="pre">Classification</span></code></a></li>
 </ul>
@@ -465,9 +465,40 @@ predict the <code class="docutils literal notranslate"><span class="pre">estimat
 <p><img alt="maths" src="_images/ai.png" /></p>
 </section>
 </section>
-<section id="machine-learning-and-its-applications">
-<h2>Machine Learning and Its Applications<a class="headerlink" href="#machine-learning-and-its-applications" title="Link to this heading">#</a></h2>
-<p>As mentioned above</p>
+<section id="machine-learning-the-process">
+<h2>Machine Learning: The process<a class="headerlink" href="#machine-learning-the-process" title="Link to this heading">#</a></h2>
+<p>With all the modern free and open source libraries available, the process of <code class="docutils literal notranslate"><span class="pre">Machine</span> <span class="pre">Learning</span></code> has been simplified to a great extent.</p>
+<p>Technically for a layman, the concept of building a model can be boiled down to the following code:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">Model</span><span class="p">()</span> <span class="c1"># Any kind of model</span>
+<span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">training_data</span><span class="p">)</span> <span class="c1"># Fit the model with the training data</span>
+<span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">test_data</span><span class="p">)</span> <span class="c1"># Predict the output of the test data</span>
+</pre></div>
+</div>
+<p>This is the basic most simplified code for <code class="docutils literal notranslate"><span class="pre">Machine</span> <span class="pre">Learning</span></code>.</p>
+<p>But in reality, the process of <code class="docutils literal notranslate"><span class="pre">Machine</span> <span class="pre">Learning</span></code> is a bit more complex. The process can be broken down into the following steps:</p>
+<ol class="arabic simple">
+<li><p><strong>Problem Statement</strong>: Define the problem statement. What are you trying to solve? What is the business problem? What is the mathematical problem?</p></li>
+<li><p><strong>Data Collection</strong>: Collect the data. The data can be in any form, structured, unstructured, semi-structured. The data can be from various sources, databases, files, APIs, etc.</p></li>
+<li><p><strong>Data Preprocessing</strong>: Clean the data. The data collected may have missing values, outliers, etc. The data needs to be cleaned and preprocessed before feeding it to the model.</p></li>
+<li><p><strong>Feature Engineering</strong>: The data collected may have a lot of features. Some features may be irrelevant, some may be redundant. The data needs to be analyzed and features need to be selected which are relevant to the problem statement.</p></li>
+<li><p><strong>Model Selection</strong>: Select the model. There are various models available for various problems. The model needs to be selected based on the problem statement.</p></li>
+<li><p><strong>Model Training</strong>: Train the model. The model needs to be trained with the training data. The model learns the patterns in the data and builds a mathematical model.</p>
+<ul class="simple">
+<li><p><strong>Model Evaluation</strong>: Evaluate the model. The model needs to be evaluated with the test data. The model is evaluated based on various metrics like accuracy, precision, recall, etc.</p></li>
+<li><p><strong>Model Tuning</strong>: Tune the model. The model may not give the desired results in the first go. The model needs to be tuned with various hyperparameters to get the best results.</p></li>
+<li><p><strong>Model Deployment</strong>: Deploy the model. The model needs to be deployed in the production environment. The model should be able to take the input data and give the output.</p></li>
+<li><p><strong>Model Monitoring</strong>: Monitor the model. The model needs to be monitored in the production environment. The model should be able to handle the real-time data and give the output.</p></li>
+<li><p><strong>Model Maintenance</strong>: Maintain the model. The model needs to be maintained in the production environment. The model should be able to adapt to the changing data and give the output.</p></li>
+</ul>
+</li>
+<li><p><strong>Model Prediction</strong>: Predict the output. The model is now ready to predict the output based on the input data.</p></li>
+<li><p><strong>Model Inference</strong>: Infer the output. The output of the model is inferred based on the problem statement. The output can be in any form, a class label, a probability, a value, etc.</p></li>
+<li><p><strong>Downstream Systems</strong>: The output of the model is used by the downstream systems to make the decisions. The downstream systems can be any system that takes the output of the model and makes the decisions.</p></li>
+<li><p><strong>Feedback Loop</strong>: The output of the downstream systems is fed back to the model. The model learns from the feedback and improves the predictions. The feedback loop is essential for the model to learn and adapt to the changing data.</p></li>
+</ol>
+<p>This is the overall project structure of a <code class="docutils literal notranslate"><span class="pre">Machine</span> <span class="pre">Learning</span></code> project. The process may vary based on the problem statement and the data available.</p>
+<p>In fact, many times, some steps of the process may need to be performed in reverse to actually understand how the previous step would even be designed.</p>
+<p>With the project oriented approach, I will try to illustrate each step in this notebook.</p>
 </section>
 <section id="types-of-machine-learning">
 <h2>Types of Machine Learning<a class="headerlink" href="#types-of-machine-learning" title="Link to this heading">#</a></h2>
@@ -478,10 +509,46 @@ predict the <code class="docutils literal notranslate"><span class="pre">estimat
 <li><p>How it should be done</p></li>
 </ul>
 <p>Think of a problem statement.</p>
-<p><img alt="map" src="_images/map_of_ml.png" /></p>
+<p>Business Question: “Predict the weather conditions of the next upcoming weekend.”</p>
+<p>Now Ask yourself the following questions:</p>
+<ul>
+<li><p>What needs to be done: Predict the weather conditions</p>
+<ul class="simple">
+<li><p>What do you mean predict the weather conditions? Do you want to predict the temperature, the humidity, the wind speed, the precipitation, the cloud cover, the visibility, the air pressure, the weather type, etc?</p></li>
+<li><p>In what form do you want the prediction? Do you want the prediction in the form of a class label, a probability, a value, etc?</p></li>
+<li><p>Does the business need predictions at day level, hour level, minute level, etc?</p></li>
+<li><p>How is the data going to be used? Is the data going to be used for decision making, reporting, analysis, etc?</p></li>
+</ul>
+</li>
+<li><p>How it should be done: Predict the weather conditions</p>
+<ul>
+<li><p>What kind of data do you have? Do you have historical data, real-time data, forecast data, etc? Do you have structured data, unstructured data, semi-structured data, etc?</p>
+<!-- - What kind of model do you want to build? Do you want to build a regression model, a classification model, a clustering model, etc? `More on this later!` -->
+<!-- - What kind of learning do you want to apply? Do you want to apply supervised learning, unsupervised learning, reinforcement learning, etc? Which all would be applicable to the problem statement? -->
+</li>
+</ul>
+</li>
+</ul>
+<p>When it comes to types of Machine Learning, the following questions are most relevant to ask:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>What needs to be done:</p>
+<ul>
+<li><p>What do you mean predict the weather conditions? Do you want to predict the temperature, the humidity, the wind speed, the precipitation, the cloud cover, the visibility, the air pressure, the weather type, etc?</p></li>
+</ul>
+</li>
+<li><p>How it should be done:</p>
+<ul>
+<li><p>What kind of data do you have? Do you have historical data, real-time data, forecast data, etc? Do you have structured data, unstructured data, semi-structured data, etc?</p></li>
+</ul>
+</li>
+</ul>
+</div></blockquote>
+<p>The above questions formulate what I call the <code class="docutils literal notranslate"><span class="pre">Matrix</span> <span class="pre">of</span> <span class="pre">Problems</span></code>.</p>
 <section id="matrix-of-problems-supervised-unsupervised-regression-classification">
 <h3>Matrix of problems: <code class="docutils literal notranslate"><span class="pre">Supervised</span></code>/<code class="docutils literal notranslate"><span class="pre">Unsupervised</span></code>, <code class="docutils literal notranslate"><span class="pre">Regression</span></code>/<code class="docutils literal notranslate"><span class="pre">Classification</span></code><a class="headerlink" href="#matrix-of-problems-supervised-unsupervised-regression-classification" title="Link to this heading">#</a></h3>
-<p>Examples:</p>
+<p>Most problem statements in classical Machine Learning can be formulated in the following matrix(example given in the table):</p>
+<p>starting statement: “Based on the historical data, …”</p>
 <table class="table">
 <thead>
 <tr class="row-odd"><th class="head text-center"><p>Objective/Type Of Learning</p></th>
@@ -491,15 +558,16 @@ predict the <code class="docutils literal notranslate"><span class="pre">estimat
 </thead>
 <tbody>
 <tr class="row-even"><td class="text-center"><p>Regression</p></td>
-<td class="text-center"><p>House Price Prediction</p></td>
-<td class="text-center"><p>House Price Estimation</p></td>
+<td class="text-center"><p>predict the temperature and the humidity values</p></td>
+<td class="text-center"><p>estimate the</p></td>
 </tr>
 <tr class="row-odd"><td class="text-center"><p>Classification</p></td>
-<td class="text-center"><p>House Class(LIG/MIG/HIG)</p></td>
-<td class="text-center"><p>Similar Houses</p></td>
+<td class="text-center"><p>predict if the day is going to be pleasent/rainy/sunny/windy</p></td>
+<td class="text-center"><p></p></td>
 </tr>
 </tbody>
 </table>
+<p><img alt="map" src="_images/map_of_ml.png" /></p>
 </section>
 </section>
 <section id="introduction-to-project-oriented-approach-stock-market">
@@ -577,7 +645,7 @@ predict the <code class="docutils literal notranslate"><span class="pre">estimat
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#machine-learning-is-purely-mathematics-anything-and-everything-that-you-would-solve-via-machine-learning-first-needs-to-be-translated-to-mathematics-first-and-then-back-to-business-problem"><code class="docutils literal notranslate"><span class="pre">Machine</span> <span class="pre">Learning</span></code> is purely mathematics. Anything and everything that you would solve via <code class="docutils literal notranslate"><span class="pre">Machine</span> <span class="pre">Learning</span></code> first needs to be translated to mathematics first and then back to business problem.</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#machine-learning-and-its-applications">Machine Learning and Its Applications</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#machine-learning-the-process">Machine Learning: The process</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-machine-learning">Types of Machine Learning</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-of-problems-supervised-unsupervised-regression-classification">Matrix of problems: <code class="docutils literal notranslate"><span class="pre">Supervised</span></code>/<code class="docutils literal notranslate"><span class="pre">Unsupervised</span></code>, <code class="docutils literal notranslate"><span class="pre">Regression</span></code>/<code class="docutils literal notranslate"><span class="pre">Classification</span></code></a></li>
 </ul>
