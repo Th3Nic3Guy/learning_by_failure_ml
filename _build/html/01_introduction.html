@@ -364,7 +364,11 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-to-the-world-of-ai-ml">Introduction to the <code class="docutils literal notranslate"><span class="pre">World</span> <span class="pre">of</span> <span class="pre">AI/ML</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-to-the-world-of-ai-ml">Introduction to the <code class="docutils literal notranslate"><span class="pre">World</span> <span class="pre">of</span> <span class="pre">AI/ML</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#machine-learning-is-not-a-magic-wand-that-can-solve-all-the-problems"><code class="docutils literal notranslate"><span class="pre">Machine</span> <span class="pre">Learning</span></code> is not a magic wand that can solve all the problems.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#machine-learning-is-purely-mathematics-anything-and-everything-that-you-would-solve-via-machine-learning-first-needs-to-be-translated-to-mathematics-first-and-then-back-to-business-problem"><code class="docutils literal notranslate"><span class="pre">Machine</span> <span class="pre">Learning</span></code> is purely mathematics. Anything and everything that you would solve via <code class="docutils literal notranslate"><span class="pre">Machine</span> <span class="pre">Learning</span></code> first needs to be translated to mathematics first and then back to business problem.</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#machine-learning-and-its-applications">Machine Learning and Its Applications</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-machine-learning">Types of Machine Learning</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-of-problems-supervised-unsupervised-regression-classification">Matrix of problems: <code class="docutils literal notranslate"><span class="pre">Supervised</span></code>/<code class="docutils literal notranslate"><span class="pre">Unsupervised</span></code>, <code class="docutils literal notranslate"><span class="pre">Regression</span></code>/<code class="docutils literal notranslate"><span class="pre">Classification</span></code></a></li>
@@ -426,18 +430,54 @@ feedback rather than you explicitly setting the value as 10.</p>
 <p>Think of <code class="docutils literal notranslate"><span class="pre">Artificial</span> <span class="pre">Intelligence</span></code>, the buzzword of the decade, as the ability to learn the art of decision making.
 Whether the decision is the action to switch on the bulb based on light intensity on the sensor or the descision to
 turn the car wheel in case of any object detected in front of the car or the ability to predict the next word in
-the sequece of sentence, or just taking the descision to determine which object is present in the image.</p>
-<p><code class="docutils literal notranslate"><span class="pre">Machine</span> <span class="pre">Learning</span></code> is the subset of this AI</p>
-<p>It is about building a mathematical set of equations which take some set of inputs and outputs a value which can be <code class="docutils literal notranslate"><span class="pre">inferred</span></code> by down stream systems as a descision.</p>
+the sequence of sentence, or just taking the descision to determine which object is present in the image.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Machine</span> <span class="pre">Learning</span></code> is the subset of this AI, <code class="docutils literal notranslate"><span class="pre">ML</span></code> is about building a mathematical set of equations which take
+some set of inputs and outputs a value which can be <code class="docutils literal notranslate"><span class="pre">inferred</span></code> by down stream systems as a descision.</p>
 <p>ML is the <code class="docutils literal notranslate"><span class="pre">if..else...end</span></code> condition that saves our efforts to come up with rules that execute certain actions.</p>
-<p>Consider <code class="docutils literal notranslate"><span class="pre">Artificial</span> <span class="pre">Intelligence</span></code></p>
+<blockquote>
+<div><p>Read more on this, the correct name for this process is called <a class="reference external" href="https://en.wikipedia.org/wiki/Markov_decision_process">Markov decision process</a></p>
+</div></blockquote>
+<p>Now having said that, its imperative to understand that <code class="docutils literal notranslate"><span class="pre">Machine</span> <span class="pre">Learning</span></code> the folling points:</p>
+<section id="machine-learning-is-not-a-magic-wand-that-can-solve-all-the-problems">
+<h3><code class="docutils literal notranslate"><span class="pre">Machine</span> <span class="pre">Learning</span></code> is not a magic wand that can solve all the problems.<a class="headerlink" href="#machine-learning-is-not-a-magic-wand-that-can-solve-all-the-problems" title="Link to this heading">#</a></h3>
+<p>Think about the problem statement:</p>
+<blockquote>
+<div><p>“I want to predict the stock price of a company for the next 10 days with <code class="docutils literal notranslate"><span class="pre">100%</span></code> accuracy. Consider <code class="docutils literal notranslate"><span class="pre">all</span></code> the news, the financial reports, the market conditions, the global economy, the political conditions, the weather, the mood of the CEO, the mood of the employees, the mood of the investors, the mood of the market, the mood of the world, the mood of the universe, the mood of the aliens, the mood of the sun, the mood of the moon, the mood of the stars, the mood of the black hole, the mood of the dark matter, the mood of the dark energy, the mood of the dark force, the mood of the dark side… and so on.”</p>
+</div></blockquote>
+<p>This is a very common problem statement that is thrown around in the world of <code class="docutils literal notranslate"><span class="pre">Machine</span> <span class="pre">Learning</span></code>(not all the moods, but some of them are included).
+People consider Machine Learning as the magic wand that can pull up all the data, do its hocus focus and give you the answer. No <code class="docutils literal notranslate"><span class="pre">Machine</span> <span class="pre">Learning</span></code> cannot do that.</p>
+</section>
+<section id="machine-learning-is-purely-mathematics-anything-and-everything-that-you-would-solve-via-machine-learning-first-needs-to-be-translated-to-mathematics-first-and-then-back-to-business-problem">
+<h3><code class="docutils literal notranslate"><span class="pre">Machine</span> <span class="pre">Learning</span></code> is purely mathematics. Anything and everything that you would solve via <code class="docutils literal notranslate"><span class="pre">Machine</span> <span class="pre">Learning</span></code> first needs to be translated to mathematics first and then back to business problem.<a class="headerlink" href="#machine-learning-is-purely-mathematics-anything-and-everything-that-you-would-solve-via-machine-learning-first-needs-to-be-translated-to-mathematics-first-and-then-back-to-business-problem" title="Link to this heading">#</a></h3>
+<p>Now Consider the same problem statement:</p>
+<blockquote>
+<div><p>“I want to predict the stock price of a company for the next 10 days with <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">considerable/acceptable/High</span></code> accuracy.
+Consider <code class="docutils literal notranslate"><span class="pre">relevant</span></code> the news, the financial reports. Provide me with the probability of the stock price going up or down.”</p>
+</div></blockquote>
+<p>This is a more realistic problem statement. What you need here is to translate the problem statement to a mathematical problem statement.</p>
+<blockquote>
+<div><p>Translated Mathematical statement: “Given the historical data of the stock price, the news, the financial reports,
+predict the <code class="docutils literal notranslate"><span class="pre">estimated</span></code> stock price of the company for the next <code class="docutils literal notranslate"><span class="pre">10</span> <span class="pre">days</span></code> with a probability of the stock price going up or down.”</p>
+</div></blockquote>
+<p>This translated statement means that the model would get historical data and vectorized financial statements and news data and then predict/estimate the stock price for the next 10 days. It should also provide a probability/confidence score of the stock price going up or down, values ranging <code class="docutils literal notranslate"><span class="pre">[-1,</span> <span class="pre">1]</span></code>.</p>
+<p>Machine Learning leverages the power of <code class="docutils literal notranslate"><span class="pre">Statistics</span></code> and generalizes the input data in various dimensions and equation to represent the input data in a mathematical form and then applies further transformations and operations to output a value.</p>
+<p>This value is then “inferred” as a decision by the downstream systems. A value output of [-1, 1] would be <em>inferred</em> as a confidence score and the direction of the stock movement, or a value like -2.4 or +5.4 may be inferred as the delta in the current value of the stock. How you infer the value is up to you and the business problem.</p>
 <p><img alt="maths" src="_images/ai.png" /></p>
+</section>
 </section>
 <section id="machine-learning-and-its-applications">
 <h2>Machine Learning and Its Applications<a class="headerlink" href="#machine-learning-and-its-applications" title="Link to this heading">#</a></h2>
+<p>As mentioned above</p>
 </section>
 <section id="types-of-machine-learning">
 <h2>Types of Machine Learning<a class="headerlink" href="#types-of-machine-learning" title="Link to this heading">#</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">Machine</span> <span class="pre">Learning</span></code> is a vast field and can be divided into various categories based on the type of learning and the nature of the data.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Machine</span> <span class="pre">Learning</span></code> can be visualized in 2 different dimensions:</p>
+<ul class="simple">
+<li><p>What needs to be done</p></li>
+<li><p>How it should be done</p></li>
+</ul>
+<p>Think of a problem statement.</p>
 <p><img alt="map" src="_images/map_of_ml.png" /></p>
 <section id="matrix-of-problems-supervised-unsupervised-regression-classification">
 <h3>Matrix of problems: <code class="docutils literal notranslate"><span class="pre">Supervised</span></code>/<code class="docutils literal notranslate"><span class="pre">Unsupervised</span></code>, <code class="docutils literal notranslate"><span class="pre">Regression</span></code>/<code class="docutils literal notranslate"><span class="pre">Classification</span></code><a class="headerlink" href="#matrix-of-problems-supervised-unsupervised-regression-classification" title="Link to this heading">#</a></h3>
@@ -532,7 +572,11 @@ the sequece of sentence, or just taking the descision to determine which object 
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-to-the-world-of-ai-ml">Introduction to the <code class="docutils literal notranslate"><span class="pre">World</span> <span class="pre">of</span> <span class="pre">AI/ML</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-to-the-world-of-ai-ml">Introduction to the <code class="docutils literal notranslate"><span class="pre">World</span> <span class="pre">of</span> <span class="pre">AI/ML</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#machine-learning-is-not-a-magic-wand-that-can-solve-all-the-problems"><code class="docutils literal notranslate"><span class="pre">Machine</span> <span class="pre">Learning</span></code> is not a magic wand that can solve all the problems.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#machine-learning-is-purely-mathematics-anything-and-everything-that-you-would-solve-via-machine-learning-first-needs-to-be-translated-to-mathematics-first-and-then-back-to-business-problem"><code class="docutils literal notranslate"><span class="pre">Machine</span> <span class="pre">Learning</span></code> is purely mathematics. Anything and everything that you would solve via <code class="docutils literal notranslate"><span class="pre">Machine</span> <span class="pre">Learning</span></code> first needs to be translated to mathematics first and then back to business problem.</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#machine-learning-and-its-applications">Machine Learning and Its Applications</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-machine-learning">Types of Machine Learning</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-of-problems-supervised-unsupervised-regression-classification">Matrix of problems: <code class="docutils literal notranslate"><span class="pre">Supervised</span></code>/<code class="docutils literal notranslate"><span class="pre">Unsupervised</span></code>, <code class="docutils literal notranslate"><span class="pre">Regression</span></code>/<code class="docutils literal notranslate"><span class="pre">Classification</span></code></a></li>
